@@ -11,9 +11,9 @@
 function isArrayLengthOdd(numbers) {
   // Your code here
     let ans;
-    if (numbers.length%2 !== 0) ans = true;
-    else ans = false;
-    console.log(`${ans}`);
+    if (numbers.length%2 !== 0) return true;
+    else return false;
+    
 }
  isArrayLengthOdd([1, 2, 3]);
  isArrayLengthOdd([1, 2, 3, 4]);
@@ -31,9 +31,8 @@ function isArrayLengthOdd(numbers) {
 function isArrayLengthEven(numbers) {
   // Your code here
     let ans;
-    if (numbers.length%2 === 0) ans = true;
-    else ans = false;
-    console.log(`${ans}`);
+    if (numbers.length%2 === 0) return true;
+    else return false;
 }
  isArrayLengthEven([1, 2, 3]); 
  isArrayLengthEven([1, 2, 3, 4]);
@@ -63,9 +62,9 @@ addLailaToArray(["Mshary", "Hasan"]);
  */
 function eliminateTeam(teams) {
   // Your code here
-teams.pop();
-console.log(`${teams}`);
-return teams;
+lastTeam=teams.pop();
+console.log(`${lastTeam}`);
+return lastTeam;
 }
  eliminateTeam(["Brazil", "Germany", "Italy"]);
 
@@ -81,15 +80,15 @@ return teams;
  */
 function secondHalfOfArrayIfItIsEven(fruits) {
   // Your code here
-    let ans ="[]";
+    let ans =[];
     if (fruits.length%2 === 0){
         let midPoint= fruits.length/2;
-        halfFruits=fruits.slice(midPoint,fruits.length);
+        halfFruits=fruits.slice(midPoint);
         console.log(`${halfFruits}`);
         return halfFruits;
     } 
     else {
-        console.log(`${ans}`)
+        console.log(ans)
     }
 }
  secondHalfOfArrayIfItIsEven(["apple", "orange", "banana", "kiwi"]);
